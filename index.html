@@ -33,7 +33,7 @@
     <script>
         // Function to clear the quiz score from local storage
 function clearQuizScore() {
-    localStorage.removeItem("score2");
+    localStorage.removeItem("score6");
 }
 
 // Function to clear local storage when the tab is closed or refreshed
@@ -46,14 +46,14 @@ window.addEventListener('beforeunload', function() {
         // Quiz questions and answers
         const quiz = [
             {
-                question: "Do you also know from how many wells the raw water to be treated enters the waterworks?",
-                options: ["3 WELLS", "5 WELLS", "7 WELLS"],
+                question: "Which balance plays a special role?",
+                options: ["Lime-carbonic acid equilibrium", "Lime-carbon acid equilibrium", "Sodium-potassium balance"],
                 answer: 0
             }
         ];
 
         let currentQuestion = 0;
-        let score2 = 0;
+        let score6 = 0;
 
         // Function to display current question
         function displayQuestion() {
@@ -95,9 +95,9 @@ window.addEventListener('beforeunload', function() {
     }
 
     if (!isAnswered || selectedOption !== quiz[currentQuestion].answer) {
-        score2 = 0; // Assign zero score if question is not attempted or answered incorrectly
+        score6 = 0; // Assign zero score if question is not attempted or answered incorrectly
     } else {
-        score2++; // Increment score for correct answer
+        score6++; // Increment score for correct answer
     }
 }
 
@@ -108,8 +108,8 @@ window.addEventListener('beforeunload', function() {
 
             if (currentQuestion === quiz.length) {
                 // All questions answered, store score in local storage
-                localStorage.setItem("score2", score2);
-                alert("Quiz completed. Your score is " + score2);
+                localStorage.setItem("score6", score6);
+                alert("Quiz completed. Your score is " + score6);
             } else {
                 displayQuestion();
             }
