@@ -26,14 +26,14 @@
     </style>
 </head>
 <body>
-    <h1>SerialN 40</h1>
+    <h1>>Filter Control Valve of Rapid Filter 3</h1>
     <div id="question"></div>
     <div id="options"></div>
-    <button onclick="nextQuestion()">SUBMIT</button>
+    <button onclick="nextQuestion()">Submit</button>
     <script>
         // Function to clear the quiz score from local storage
 function clearQuizScore() {
-    localStorage.removeItem("SerialN_40_Score");
+    localStorage.removeItem("Filter_Control_Valve_3");
 }
 
 // Function to clear local storage when the tab is closed or refreshed
@@ -49,13 +49,13 @@ window.addEventListener('beforeunload', function() {
         const quiz = [
             {
                 question: "Which balance plays a special role?",
-                options: ["Lime-carbonic acid equilibrium", "Lime-carbon acid equilibrium", "Sodium-potassium balance"],
+                options: ["Lime-Carbonic Acid Equilibrium", "Lime-Carbon Acid Equilibrium", "Sodium-Potassium Balance"],
                 answer: 0
             }
         ];
 
         let currentQuestion = 0;
-        let SerialN_40_Score = 0;
+        let Filter_Control_Valve_3 = 0;
 
         // Function to display current question
         function displayQuestion() {
@@ -99,9 +99,9 @@ window.addEventListener('beforeunload', function() {
     }
 
     if (!isAnswered || selectedOption !== quiz[currentQuestion].answer) {
-        SerialN_40_Score = 0; // Assign zero score if question is not attempted or answered incorrectly
+        Filter_Control_Valve_3 = 0; // Assign zero score if question is not attempted or answered incorrectly
     } else {
-        SerialN_40_Score++; // Increment score for correct answer
+        Filter_Control_Valve_3++; // Increment score for correct answer
     }
 }
 
@@ -112,8 +112,8 @@ window.addEventListener('beforeunload', function() {
 
             if (currentQuestion === quiz.length) {
                 // All questions answered, store score in local storage
-                localStorage.setItem("SerialN_40_Score", SerialN_40_Score);
-                alert("Quiz completed. Your score is " + SerialN_40_Score);
+                localStorage.setItem("Filter_Control_Valve_3", Filter_Control_Valve_3);
+                alert("Quiz completed. Your score is " + Filter_Control_Valve_3);
             } else {
                 displayQuestion();
             }
